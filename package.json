@@ -1,0 +1,20 @@
+{
+  "name": "parking-app",
+  "version": "1.0.0",
+  "description": "Application Node.js de gestion d'un parking automobile pour ParkEasy",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node src/app.js",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "node-localstorage": "^3.0.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
