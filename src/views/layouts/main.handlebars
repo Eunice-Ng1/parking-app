@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkEasy — Gestion de parking</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header h1 { font-size: 1.25rem; margin: 0; }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 1.25rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover { color: white; }
+    main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+    .carte {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid #e5e7eb; }
+    th { color: #6b7280; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    .badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+    .badge-libre { background: #dcfce7; color: #166534; }
+    .badge-occupee { background: #fee2e2; color: #991b1b; }
+    form { display: flex; flex-direction: column; gap: 0.9rem; max-width: 380px; }
+    label { font-size: 0.85rem; font-weight: 600; color: #374151; }
+    input, select {
+      padding: 0.55rem 0.7rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.65rem 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: fit-content;
+    }
+    button:hover { background: #1d4ed8; }
+    .message { padding: 0.8rem 1rem; border-radius: 6px; margin-bottom: 1rem; font-size: 0.95rem; }
+    .message-succes { background: #dcfce7; color: #14532d; }
+    .message-erreur { background: #fee2e2; color: #7f1d1d; }
+    .compteurs { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .compteur { flex: 1; min-width: 140px; background: #f8fafc; border-radius: 8px; padding: 1rem; text-align: center; }
+    .compteur .nombre { font-size: 1.8rem; font-weight: 700; }
+    .compteur .libelle { font-size: 0.8rem; color: #6b7280; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🅿️ ParkEasy</h1>
+    <nav>
+      <a href="/">Tableau de bord</a>
+      <a href="/entree">Entrée</a>
+      <a href="/sortie">Sortie</a>
+      <a href="/places">Places</a>
+    </nav>
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+</body>
+</html>

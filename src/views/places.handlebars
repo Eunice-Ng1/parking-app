@@ -1,0 +1,21 @@
+<div class="carte">
+  <h2>Liste des places</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Identifiant</th>
+        <th>Catégorie</th>
+        <th>Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each places}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.categorie}}</td>
+          <td>{{{badgeStatut this.statut}}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

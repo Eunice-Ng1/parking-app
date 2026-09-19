@@ -1,0 +1,36 @@
+<div class="carte">
+  <h2>Tableau de bord</h2>
+  <p style="color:#6b7280;">État des places, mis à jour en temps réel.</p>
+  <div class="compteurs">
+    {{#each etat}}
+      <div class="compteur">
+        <div class="nombre">{{this.libres}} / {{this.total}}</div>
+        <div class="libelle">{{this.categorie}} libres</div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="carte">
+  <h2>Détail par catégorie</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Catégorie</th>
+        <th>Total</th>
+        <th>Libres</th>
+        <th>Occupées</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each etat}}
+        <tr>
+          <td>{{this.categorie}}</td>
+          <td>{{this.total}}</td>
+          <td>{{this.libres}}</td>
+          <td>{{this.occupees}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

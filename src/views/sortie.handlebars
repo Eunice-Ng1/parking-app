@@ -1,0 +1,22 @@
+<div class="carte">
+  <h2>Sortie d'un véhicule</h2>
+
+  {{#if succes}}
+    <div class="message message-succes">
+      Véhicule <strong>{{ticket.plaque}}</strong> sorti à {{formaterDate ticket.dateSortie}} —
+      durée facturée depuis {{formaterDate ticket.dateEntree}}, montant dû : <strong>{{ticket.montant}} F CFA</strong>.
+    </div>
+  {{/if}}
+
+  {{#if erreur}}
+    <div class="message message-erreur">{{erreur}}</div>
+  {{/if}}
+
+  <form method="POST" action="/sortie">
+    <div>
+      <label for="plaque">Plaque d'immatriculation</label>
+      <input type="text" id="plaque" name="plaque" placeholder="DK-1234-AB" required>
+    </div>
+    <button type="submit">Enregistrer la sortie</button>
+  </form>
+</div>

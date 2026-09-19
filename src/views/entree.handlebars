@@ -1,0 +1,29 @@
+<div class="carte">
+  <h2>Entrée d'un véhicule</h2>
+
+  {{#if succes}}
+    <div class="message message-succes">
+      Véhicule <strong>{{ticket.plaque}}</strong> enregistré — place attribuée : <strong>{{ticket.placeId}}</strong> ({{formaterDate ticket.dateEntree}}).
+    </div>
+  {{/if}}
+
+  {{#if erreur}}
+    <div class="message message-erreur">{{erreur}}</div>
+  {{/if}}
+
+  <form method="POST" action="/entree">
+    <div>
+      <label for="plaque">Plaque d'immatriculation</label>
+      <input type="text" id="plaque" name="plaque" placeholder="DK-1234-AB" required>
+    </div>
+    <div>
+      <label for="categorie">Catégorie de véhicule</label>
+      <select id="categorie" name="categorie" required>
+        <option value="VOITURE">VOITURE</option>
+        <option value="MOTO">MOTO</option>
+        <option value="PMR">PMR</option>
+      </select>
+    </div>
+    <button type="submit">Enregistrer l'entrée</button>
+  </form>
+</div>
