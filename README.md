@@ -13,6 +13,8 @@ de véhicules, places, tarifs).
 - Sauvegarde les données sur le disque avec node-localstorage
 
 ## Organisation du code
+
+```
 parking-app/
 ├── src/
 │ ├── metier/ # Place, Ticket, Parking, erreurs, config (tarifs/places)
@@ -36,6 +38,7 @@ parking-app/
 ├── data/ # fichiers créés par node-localstorage (pas versionnés)
 ├── package.json
 └── README.md
+```
 
 L'idée derrière cette organisation : la classe `Parking` ne sait pas comment les
 données sont sauvegardées, elle reçoit juste un "repository" en paramètre
